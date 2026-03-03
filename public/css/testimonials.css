@@ -1,0 +1,38 @@
+#testimonials {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap: calc(var(--font-size) * 3);
+  margin-bottom: var(--margin);
+
+  article {
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    gap: var(--font-size);
+
+    img {
+      border-radius: calc(var(--font-size) * 0.5);
+    }
+  }
+}
+
+@media screen and (max-width: 720px) and (orientation: portrait) {
+  #testimonials {
+    grid-template-columns:1fr;
+
+    article {
+      grid-template-columns:1fr 3fr;
+
+      &:nth-of-type(2n) {
+        grid-template-columns:3fr 1fr;
+
+        img {
+          order: 2;
+        }
+
+        div {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

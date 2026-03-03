@@ -1,4 +1,12 @@
 {
-  "name": "03",
-  "packageManager": "yarn@4.9.2"
+  "name": "website-2026-03",
+  "packageManager": "yarn@4.9.2",
+  "scripts": {
+    "dev": "http-server -p 8080",
+    "serve": "http-server"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.8.1"
+  }
 }

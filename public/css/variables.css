@@ -1,0 +1,11 @@
+:root {
+  --color-foreground: #143243;
+  --color-background: #F4F9EB;
+  --color-primary: #22AD6C;
+
+  --font-size: 1rem;
+  --line-height: 1.5;
+
+  --width-max: calc(var(--font-size) * 60);
+  --margin: calc(var(--font-size) * 12)
+}

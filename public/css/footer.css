@@ -1,0 +1,8 @@
+#footer {
+  padding: var(--font-size);
+  text-align: center;
+
+  a {
+    font-weight: 800;
+  }
+}

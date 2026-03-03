@@ -1,0 +1,436 @@
+/* Condensed */
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConThi.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConThi.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConThiIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConThiIt.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConLig.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConLig.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConLigIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConLigIt.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond Book';
+  src: url('../font/Torcao/Torcao-ConBoo.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConBoo.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond Book';
+  src: url('../font/Torcao/Torcao-ConBooIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConBooIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConReg.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConReg.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConRegIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConRegIt.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConMed.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConMed.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConMedIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConMedIt.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond Demi';
+  src: url('../font/Torcao/Torcao-ConDem.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConDem.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond Demi';
+  src: url('../font/Torcao/Torcao-ConDemIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConDemIt.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConBol.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConBol.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond';
+  src: url('../font/Torcao/Torcao-ConBolIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConBolIt.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond ExBold';
+  src: url('../font/Torcao/Torcao-ConExB.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConExB.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Cond ExBold';
+  src: url('../font/Torcao/Torcao-ConExBIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ConExBIt.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Extended */
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtThi.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtThi.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtThiIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtThiIt.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtLig.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtLig.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtLigIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtLigIt.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtBoo.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtBoo.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtBooIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtBooIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtReg.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtReg.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext Regular';
+  src: url('../font/Torcao/Torcao-ExtRegIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtRegIt.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtMed.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtMed.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtMedIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtMedIt.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtDem.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtDem.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtDemIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtDemIt.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtBol.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtBol.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtBolIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtBolIt.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtExBIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtExBIt.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Ext';
+  src: url('../font/Torcao/Torcao-ExtExB.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-ExtExB.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Normal */
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorThi.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorThi.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorThiIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorThiIt.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorLig.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorLig.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorLigIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorLigIt.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorBoo.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorBoo.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorBooIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorBooIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorReg.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorReg.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm Regular';
+  src: url('../font/Torcao/Torcao-NorRegIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorRegIt.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorMed.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorMed.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorMedIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorMedIt.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorDem.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorDem.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorDemIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorDemIt.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorBol.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorBol.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorBolIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorBolIt.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorExB.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorExB.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Torcao Norm';
+  src: url('../font/Torcao/Torcao-NorExBIt.woff2') format('woff2'),
+  url('../font/Torcao/Torcao-NorExBIt.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}

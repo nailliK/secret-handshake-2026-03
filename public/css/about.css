@@ -1,0 +1,41 @@
+#about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--margin);
+  aspect-ratio: 2 / 1;
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: calc(var(--font-size) * 2);
+    z-index: 0;
+  }
+
+  div {
+    position: relative;
+    z-index: 1;
+    width: 75%;
+    background-color: var(--color-foreground);
+    color: var(--color-background);
+    padding: calc(var(--font-size) * 2);
+    border-radius: calc(var(--font-size) * .5);
+  }
+}
+
+@media screen and (max-width: 720px) and (orientation: portrait) {
+  #about {
+    img {
+      width: 100%;
+    }
+
+    div {
+      margin: 50% auto 0 auto;
+      padding: var(--font-size);
+    }
+  }
+}
