@@ -1,6 +1,8 @@
 :root {
-  --color-foreground: #143243;
-  --color-background: #F4F9EB;
+  /*--color-foreground: #143243;*/
+  /*--color-background: #F4F9EB;*/
+  --color-foreground: #F4F9EB;
+  --color-background: #143243;
   --color-primary: #22AD6C;
 
   --font-size: 1rem;

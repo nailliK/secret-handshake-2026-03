@@ -10,7 +10,7 @@ h1 {
   font-size: calc(var(--font-size) * 2);
   line-height: 1;
   font-family: "Torcao Ext", cursive;
-  font-weight: 700;
+  font-weight: 100;
   font-style: italic;
   text-align: center;
 }

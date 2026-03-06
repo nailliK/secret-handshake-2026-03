@@ -31,3 +31,13 @@ nav {
     display: none;
   }
 }
+
+#icon {
+  .icon-body {
+    fill: var(--color-foreground);
+  }
+
+  .icon-line {
+    fill: var(--color-primary);
+  }
+}

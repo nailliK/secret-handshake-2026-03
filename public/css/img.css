@@ -1,0 +1,4 @@
+img {
+  display: inline-block;
+  filter: drop-shadow(0 calc(var(--font-size) * .25) calc(var(--font-size) * .125) rgba(0, 0, 0, .5));
+}
