@@ -7,7 +7,13 @@ html, body {
 
 body {
   position: relative;
-  padding-top: calc(var(--font-size) * 4)
+  padding-top: calc(var(--font-size) * 4);
+  opacity: 0;
+  transition: opacity .5s;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
 
 main {
