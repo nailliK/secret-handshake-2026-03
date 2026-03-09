@@ -1,13 +1,20 @@
-const fps = 12;
+export default class Blobs {
+  fps = 12;
 
-function render() {
-  console.log('rendering...');
-}
+  constructor(fps) {
+    this.fps = fps;
+    // this.tick();
+  }
 
-function tick() {
-  render();
+  render() {
+    console.log('rendering...');
+  }
 
-  setTimeout(() => {
-    requestAnimationFrame(tick);
-  }, 1000 / fps);
+  tick() {
+    this.render();
+
+    setTimeout(() => {
+      requestAnimationFrame(this.tick);
+    }, 1000 / this.fps);
+  }
 }
