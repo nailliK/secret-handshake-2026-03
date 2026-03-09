@@ -1,6 +1,18 @@
-import Blobs from "./blobs";
+import Blobs from './blobs.js';
 
-window.onload = function () {
-  document.body.classList.add('loaded');
-  new Blobs(12);
-};
+class Main {
+  constructor() {
+    this.initListeners();
+  }
+
+  initListeners() {
+    window.onload = function () {
+      document.body.classList.add('loaded');
+      new Blobs(12);
+    };
+  }
+}
+
+const main = new Main();
+
+export default main;
