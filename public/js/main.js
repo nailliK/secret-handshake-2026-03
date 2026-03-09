@@ -1,4 +1,5 @@
-@import('./../js/main.js');
+import './blobs';
+
 window.onload = function () {
   document.body.classList.add('loaded');
 };
