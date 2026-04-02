@@ -2,8 +2,8 @@
   position: fixed;
   z-index: 100;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: var(--gap);
+  right: var(--gap);
 }
 
 nav {
@@ -13,6 +13,10 @@ nav {
   gap: calc(var(--font-size) * 0.25);
   justify-content: space-between;
   align-items: start;
+
+  a {
+    backdrop-filter: blur(var(--gap));
+  }
 
   a, a > svg {
     display: block;
@@ -26,18 +30,32 @@ nav {
   }
 }
 
-@media screen and (max-width: 384px) {
-  nav .links a:nth-of-type(1) {
-    display: none;
+#logo {
+  svg {
+    path {
+      fill: var(--color-foreground);
+    }
   }
 }
 
-#icon {
-  .icon-body {
-    fill: var(--color-foreground);
+#linkedin {
+  svg {
+    path {
+      fill: var(--color-blue);
+    }
   }
+}
 
-  .icon-line {
-    fill: var(--color-primary);
+#email {
+  svg {
+    path {
+      fill: var(--color-pink);
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #linkedin {
+    display: none;
   }
 }

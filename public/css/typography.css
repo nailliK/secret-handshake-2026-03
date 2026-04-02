@@ -6,33 +6,6 @@ html {
   font-weight: 400;
 }
 
-h1 {
-  font-size: calc(var(--font-size) * 2);
-  line-height: 1;
-  font-family: "Torcao Ext", cursive;
-  font-weight: 100;
-  font-style: italic;
-  text-align: center;
-}
-
-@media screen and (min-width: 640px) {
-  h1 {
-    font-size: calc(var(--font-size) * 4);
-  }
-}
-
-@media screen and (min-width: 960px) {
-  h1 {
-    font-size: calc(var(--font-size) * 6);
-  }
-}
-
-h2, h3 {
-  font-family: "Torcao Ext", cursive;
-  font-weight: 700;
-  font-size: calc(var(--font-size) * 2);
-  margin-bottom: var(--font-size);
-}
 
 p {
   font-size: var(--font-size);
@@ -43,11 +16,125 @@ p {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  font-family: "Torcao Ext", cursive;
+  line-height: 1;
+  padding: 0.25em 0;
+}
+
+h1 {
+  font-size: calc(var(--font-size) * 6);
+}
+
+h2 {
+  font-size: calc(var(--font-size) * 4);
+  border-bottom: solid calc(var(--font-size) / 2) var(--color-foreground);
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+h3 {
+  font-size: calc(var(--font-size) * 3);
+  border-bottom: solid calc(var(--font-size) / 8) var(--color-foreground);
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+h4 {
+  font-size: calc(var(--font-size) * 2);
+  margin-bottom: var(--gap);
+}
+
+@media screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    hyphens: auto;
+  }
+
+  h1 {
+    font-size: calc(var(--font-size) * 4);
+  }
+
+  h2 {
+    font-size: calc(var(--font-size) * 3);
+  }
+
+  h3 {
+    font-size: calc(var(--font-size) * 2);
+  }
+
+  h4 {
+    font-size: calc(var(--font-size) * 1.5);
+  }
+}
+
 strong {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
+}
+
+q, cite {
+  display: block;
+}
+
+q {
+  margin-bottom: var(--gap);
+}
+
+.gradient-text-hero {
+  background: linear-gradient(135deg, var(--color-green), var(--color-blue), var(--color-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.gradient-text-primary {
+  background: linear-gradient(135deg, var(--color-green), var(--color-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.gradient-text-secondary {
+  background: linear-gradient(135deg, var(--color-pink), var(--color-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.gradient-text-tertiary {
+  background: linear-gradient(135deg, var(--color-blue), var(--color-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.contact-cta {
+  background: linear-gradient(135deg, var(--color-green), var(--color-blue), var(--color-pink));
+  background-size: 300% 300%;
+  color: var(--color-background);
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1.2em;
+  padding: calc(1em / 4) calc(1em / 2);
+  border-radius: 0.25em;
+  animation: ContactCTA 3s ease infinite;
+}
+
+@keyframes ContactCTA {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }

@@ -3,173 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <title>Secret Handshake</title>
-  <meta content="Secret Handshake is a software engineering partner for agencies and small teams in Denver, Colorado."
-        name="description"/>
+  <meta
+    content="Secret Handshake is a software engineering partner for agencies and small businesses in Denver, Colorado."
+    name="description"/>
 
   <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <link href="favicon.svg" rel="icon" sizes="any" type="image/svg+xml">
-  <link href="css/main.css" rel="stylesheet"/>
+  <link href="/favicon.svg" rel="icon" sizes="any" type="image/svg+xml">
+
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity .5s;
+
+      &.loaded {
+        opacity: 1;
+      }
+    }
+  </style>
+  <link href="/css/main.css" rel="stylesheet"/>
 
 </head>
-<body>
-<header id="header">
-  <nav>
-    <a href="/"><span class="sr-only">Secret Handshake</span>
-      <svg fill="none" height="64" id="icon" viewBox="0 0 240 64" width="240" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_0_3)">
-          <path class="icon-body"
-                d="M240 64H0V0H240V64ZM122.2 35.6621C118.165 35.6621 114.213 37.4102 114.213 41.4502C114.213 46.1725 117.81 47.265 121.982 47.6475C124.082 47.8124 125.144 48.4398 125.145 49.3945C125.145 50.432 123.945 51.0878 122.173 51.0879C120.535 51.0879 118.465 50.7323 116.582 48.9023L113.61 52.3154V52.3174C116.28 55.1298 118.68 55.6748 122.143 55.6748C126.423 55.6748 130.485 53.9 130.485 49.4775C130.485 45.055 126.56 43.5526 122.77 43.1426C120.89 42.9251 119.608 42.7599 119.607 41.4502C119.607 40.4403 120.887 40.003 122.197 40.0029C123.862 40.0029 125.36 40.3574 126.643 41.3398L129.315 37.9277C127.27 36.2628 125.035 35.6621 122.2 35.6621ZM8.78027 55.21H14.1777V48.0029H21.0479V55.21H26.3926V36.0977H21.0479V43.3877H14.1777V36.0977H8.78027V55.21ZM33.1221 55.21H38.8477L40.1025 52.0977H48.6377L49.8652 55.21H55.6445L47.1377 36.0977H41.6826L33.1221 55.21ZM62.3555 55.21H67.8076V49.0674L67.7246 44.918L75.6875 55.21H80.2676V36.0977H74.8428V42.6777L74.9805 46.582L66.9375 36.0977H62.3555V55.21ZM89.2051 55.21H97.3848C104.23 55.21 107.338 50.76 107.338 45.5176C107.338 40.2751 104.12 36.0977 97.3848 36.0977H89.2051V55.21ZM138.105 55.21H143.503V48.0029H150.372V55.21H155.718V36.0977H150.372V43.3877H143.503V36.0977H138.105V55.21ZM162.45 55.21H168.175L169.43 52.0977H177.963L179.19 55.21H184.97L176.463 36.0977H171.01L162.45 55.21ZM191.685 55.21H197.082V48.8477L202.535 55.21H209.188V54.8828L200.79 45.4629L208.56 36.3975V36.0977H202.098L197.08 42.4053V36.0977H191.685V55.21ZM215.955 36.0977V55.21H231.223V50.6504H221.27V47.7822H230.295V43.3877H221.27V40.6025H230.84V36.0977H215.955ZM97.3848 40.5752C100.685 40.5752 101.992 42.8429 101.992 45.4629C101.992 48.0828 100.792 50.6504 97.3848 50.6504H94.5498V40.5752H97.3848ZM46.8096 47.5898H41.9023L44.3828 41.4473L46.8096 47.5898ZM176.135 47.5898H171.228L173.707 41.4473L176.135 47.5898ZM16.0596 8.35742C12.0249 8.35755 8.07257 10.105 8.07227 14.1445C8.07227 18.867 11.6703 19.9603 15.8428 20.3428C17.9425 20.5078 19.0048 21.135 19.0049 22.0898C19.0049 23.1273 17.8047 23.7822 16.0322 23.7822C14.3948 23.7822 12.3248 23.4275 10.4424 21.5977L7.46973 25.0098L7.46777 25.0127C10.1402 27.825 12.5405 28.3701 16.0029 28.3701C20.2827 28.37 24.3445 26.5949 24.3447 22.1729C24.3447 17.7504 20.4199 16.2479 16.6299 15.8379C14.7499 15.6204 13.4678 15.4545 13.4678 14.1445C13.4682 13.1349 14.7503 12.6973 16.0576 12.6973C17.7226 12.6973 19.2205 13.0527 20.5029 14.0352L23.1748 10.6221C21.1324 8.95727 18.8944 8.35742 16.0596 8.35742ZM64.6426 8.35547C57.4726 8.35547 54.2275 13.5429 54.2275 18.4854L54.2227 18.4873C54.2227 23.6473 57.1952 28.3701 64.6377 28.3701C67.5826 28.3701 70.1449 27.552 72.2998 25.3945L69.1377 21.8447C67.7752 23.2372 65.9746 23.8096 64.6396 23.8096C60.875 23.8094 59.5675 21.0251 59.5674 18.5127C59.5674 16.0003 60.9324 13.0256 64.6396 13.0254C65.9496 13.0254 67.313 13.3521 68.7305 14.6621L72.0576 11.4121C69.8502 9.30972 67.4225 8.35549 64.6426 8.35547ZM31.9678 27.9053H47.2354V23.3447H37.2822V20.4775H46.3076V16.082H37.2822V13.2979H46.8525V8.79297H31.9678V27.9053ZM104.332 27.9053H119.6V23.3447H109.647V20.4775H118.673V16.082H109.647V13.2979H119.218V8.79297H104.332V27.9053ZM126.077 13.2422H131.638V27.9053H136.982V13.2422H142.6V8.79297H126.077V13.2422ZM79.3154 27.9023H84.7129V21.7324H86.5928L91.0371 27.9023H96.9824V27.5752L91.9922 21.1875C95.2372 19.7675 96.0547 17.6922 96.0547 15.3447C96.0546 11.9323 93.5197 8.79297 88.6123 8.79297H79.3154V27.9023ZM88.6123 13.1074C90.0573 13.1074 90.7402 14.2551 90.7402 15.4551C90.7402 16.6549 90.1126 17.7468 88.668 17.7471L88.665 17.75H84.7129V13.1074H88.6123Z"/>
-          <path class="icon-line" d="M150.32 16.0825H231.223V20.4775H190.771H150.32V16.0825Z"/>
-        </g>
-        <defs>
-          <clipPath id="clip0_0_3">
-            <rect fill="white" height="64" width="240"/>
-          </clipPath>
-        </defs>
-      </svg>
-    </a>
 
-    <div class="links">
-      <a href="https://linkedin.com/company/secret-handshake-denver" target="_blank">
-        <span class="sr-only">LinkedIn</span>
-        <svg fill="none" height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M64 64H0V0H64V64ZM19.9375 18C18.875 18 18 18.9375 18 20.0625V44C18 45.125 18.875 46 19.9375 46H44C45.0625 46 46 45.125 46 44V20.0625C46 18.9375 45.0625 18 44 18H19.9375ZM26.4375 28.6875V42H22.3125V28.6875H26.4375ZM37 28.3125C41.1875 28.3125 42 31.125 42 34.6875V42H37.8125V35.5C37.8125 34 37.8125 32 35.6875 32C33.5 32 33.1875 33.6875 33.1875 35.4375V42H29.0625V28.6875H33V30.5H33.0625C33.625 29.4375 35 28.3125 37 28.3125ZM24.375 22C25.6875 22 26.75 23.125 26.75 24.4375C26.75 25.75 25.6875 26.8125 24.375 26.8125C23 26.8125 21.9375 25.75 21.9375 24.4375C21.9375 23.125 23 22 24.375 22Z"
-            fill="#22AD6C"/>
-        </svg>
-      </a>
-      <a href="mailto:hello@secrethandshake.io"><span class="sr-only">hello@secrethandshake.io</span>
-        <svg fill="none" height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M64 64H0V0H64V64ZM33.125 37.6875L32 38.4375L30.8125 37.6875L16 27.4375V44H48V27.4375L33.125 37.6875ZM16 20V25L32 36L48 25V20H16Z"
-            fill="#22AD6C"/>
-        </svg>
-      </a>
-    </div>
-  </nav>
-</header>
+<body>
 <main>
+  <header id="header">
+    <nav>
+      <a href="/" id="logo">
+        <span class="sr-only">Secret Handshake</span>
+        <svg fill="none" height="128" id="icon" viewBox="0 0 480 128" width="480" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M480 128H0V0H480V128ZM244.4 71.3252C236.33 71.3252 228.425 74.8204 228.425 82.9004C228.425 92.345 235.62 94.5299 243.965 95.2949C248.165 95.6249 250.29 96.88 250.29 98.79C250.29 100.865 247.89 102.175 244.345 102.175C241.07 102.175 236.93 101.465 233.165 97.8047L227.22 104.63V104.635C232.56 110.26 237.36 111.35 244.285 111.35C252.845 111.35 260.97 107.8 260.97 98.9551C260.97 90.1101 253.12 87.1052 245.54 86.2852C241.78 85.8502 239.215 85.52 239.215 82.9004C239.215 80.8804 241.776 80.0049 244.396 80.0049C247.725 80.005 250.72 80.7148 253.285 82.6797L258.63 75.8555C254.54 72.5255 250.07 71.3252 244.4 71.3252ZM17.5596 110.42H28.3555V96.0049H42.0947V110.42H52.7852V72.1953H42.0947V86.7754H28.3555V72.1953H17.5596V110.42ZM66.2451 110.42H77.6953L80.2051 104.195H97.2754L99.7305 110.42H111.29L94.2754 72.1953H83.3652L66.2451 110.42ZM124.71 110.42H135.615V98.1348L135.45 89.835L151.375 110.42H160.535V72.1953H149.685V85.3555L149.96 93.165L133.875 72.1953H124.71V110.42ZM178.41 110.42H194.771C208.46 110.42 214.675 101.52 214.675 91.0352C214.675 80.5503 208.24 72.1955 194.771 72.1953H178.41V110.42ZM276.21 110.42H287.005V96.0049H300.745V110.42H311.435V72.1953H300.745V86.7754H287.005V72.1953H276.21V110.42ZM324.9 110.42H336.35L338.86 104.195H355.925L358.38 110.42H369.94L352.925 72.1953H342.021L324.9 110.42ZM383.37 110.42H394.165V97.6953L405.07 110.42H418.375V109.765L401.58 90.9248L417.12 72.7949V72.1953H404.195L394.16 84.8096V72.1953H383.37V110.42ZM431.91 72.1953V110.42H462.445V101.3H442.54V95.5654H460.59V86.7754H442.54V81.2051H461.68V72.1953H431.91ZM194.771 81.1504C201.37 81.1506 203.985 85.685 203.985 90.9248C203.985 96.1647 201.585 101.3 194.771 101.3H189.1V81.1504H194.771ZM93.6201 95.1797H83.8047L88.7646 82.8945L93.6201 95.1797ZM352.271 95.1797H342.455L347.415 82.8945L352.271 95.1797ZM32.1201 16.7148C24.0501 16.7148 16.1445 20.21 16.1445 28.29C16.1445 37.7348 23.3398 39.9195 31.6846 40.6846C35.8843 41.0146 38.0095 42.2699 38.0098 44.1797C38.0098 46.2546 35.6102 47.5653 32.0654 47.5654C28.7904 47.5654 24.6498 46.8553 20.8848 43.1953L14.9404 50.0195L14.9346 50.0254C20.2795 55.6504 25.0799 56.7402 32.0049 56.7402C40.5649 56.7402 48.6904 53.1897 48.6904 44.3447C48.6903 35.4999 40.8397 32.4948 33.2598 31.6748C29.4999 31.2398 26.9346 30.9099 26.9346 28.29C26.9346 26.27 29.5002 25.3945 32.1152 25.3945C35.4451 25.3946 38.4399 26.1054 41.0049 28.0703L46.3496 21.2451C42.2647 17.9152 37.79 16.7149 32.1201 16.7148ZM129.285 16.71C114.945 16.71 108.455 27.0848 108.455 36.9697L108.445 36.9746C108.445 47.2946 114.39 56.7402 129.275 56.7402C135.165 56.7402 140.29 55.1048 144.6 50.79L138.275 43.6904C135.55 46.4753 131.95 47.62 129.28 47.6201C121.75 47.6201 119.135 42.0503 119.135 37.0254C119.135 32.0004 121.865 26.0498 129.28 26.0498C131.9 26.0499 134.625 26.7053 137.46 29.3252L144.115 22.8252C139.7 18.6202 134.845 16.71 129.285 16.71ZM63.9346 55.8096H94.4697V46.6904H74.5654V40.9551H92.6152V32.165H74.5654V26.5947H93.7051V17.585H63.9346V55.8096ZM208.665 55.8096H239.2V46.6904H219.295V40.9551H237.345V32.165H219.295V26.5947H238.435V17.585H208.665V55.8096ZM252.155 26.4854H263.275V55.8096H273.965V26.4854H285.2V17.585H252.155V26.4854ZM158.63 55.8047H169.425V43.4648H173.185L182.075 55.8047H193.965V55.1504L183.985 42.375C190.475 39.5351 192.11 35.3852 192.11 30.6904C192.11 23.8654 187.04 17.585 177.225 17.585H158.63V55.8047ZM300.64 40.9551H462.445V32.165H300.64V40.9551ZM177.225 26.2148C180.115 26.2148 181.48 28.5102 181.48 30.9102C181.48 33.3101 180.225 35.4951 177.335 35.4951L177.33 35.5H169.425V26.2148H177.225Z"/>
+        </svg>
+      </a>
+
+      <div class="links">
+        <a href="https://linkedin.com/company/secret-handshake-denver" id="linkedin" target="_blank">
+          <span class="sr-only">LinkedIn</span>
+          <svg fill="none" height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M64 64H0V0H64V64ZM19.9375 18C18.875 18 18 18.9375 18 20.0625V44C18 45.125 18.875 46 19.9375 46H44C45.0625 46 46 45.125 46 44V20.0625C46 18.9375 45.0625 18 44 18H19.9375ZM26.4375 28.6875V42H22.3125V28.6875H26.4375ZM37 28.3125C41.1875 28.3125 42 31.125 42 34.6875V42H37.8125V35.5C37.8125 34 37.8125 32 35.6875 32C33.5 32 33.1875 33.6875 33.1875 35.4375V42H29.0625V28.6875H33V30.5H33.0625C33.625 29.4375 35 28.3125 37 28.3125ZM24.375 22C25.6875 22 26.75 23.125 26.75 24.4375C26.75 25.75 25.6875 26.8125 24.375 26.8125C23 26.8125 21.9375 25.75 21.9375 24.4375C21.9375 23.125 23 22 24.375 22Z"
+              fill="#22AD6C"></path>
+          </svg>
+        </a>
+        <a href="mailto:hello@secrethandshake.io" id="email">
+          <span class="sr-only">hello@secrethandshake.io</span>
+          <svg fill="none" height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M64 64H0V0H64V64ZM33.125 37.6875L32 38.4375L30.8125 37.6875L16 27.4375V44H48V27.4375L33.125 37.6875ZM16 20V25L32 36L48 25V20H16Z"
+              fill="#22AD6C"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
   <section id="hero">
-    <h1>Secret Handshake is a software engineering partner for agencies and small teams in Denver, Colorado.</h1>
+    <h1 class="gradient-text-hero">Secret Handshake is a software engineering partner for agencies and small
+      businesses in
+      Denver, Colorado.</h1>
   </section>
 
   <section id="about">
-    <img alt="Robot hand 1" src="img/hand-1-alt.png"/>
-    <div>
-      <h2>You sell the work. I build it.</h2>
-      <p>Hi, I'm Killian Grant. I have been a software engineer for over 20 years. Most of my career has been in
-        consultancies. I'm comfortable
-        teaming up with designers and account managers on creative projects, joining pods to build enterprise platforms,
-        or going solo.</p>
-      <p>If you need an extra set of hands, <a href="mailto:hello@secrethandshake.io">
-        <strong>I’m available.</strong>
-      </a></p>
-    </div>
+    <h2>About</h2>
+
+    <h3>Good work. No hassle.</h3>
+
+    <article>
+      <h4>Hi, I'm Killian Grant. </h4>
+      <p>I have been a software engineer for over 20 years. Most of my career has been in
+        consultancies. I'm comfortable teaming up with designers and account managers on creative projects, joining pods
+        to build enterprise platforms, or going solo.</p>
+      <p>
+        Contact me if you need an extra set of hands.
+      </p>
+      <p>
+        <a class="contact-cta" href="mailto:hello@secrethandshake.io">I’m available.</a>
+      </p>
+    </article>
+
   </section>
 
   <section id="services">
-    <article>
-      <img alt="Robot hand 2" src="img/hand-2-alt.png"/>
-      <div>
-        <h3>Your team sold a project. Now you need someone to build it.</h3>
-        <p>You closed the deal but your bench is full. I step in, pick up the scope, and deliver. Your client never
-          knows I'm not on staff. I scope accurately, communicate clearly, and ship what I said I would, when I said I
-          would.</p>
-      </div>
-    </article>
+    <h2>Services</h2>
 
-    <article>
-      <img alt="Robot hand 3" src="img/hand-3-alt.png"/>
+    <details name="services" open>
+      <summary>For Everyone</summary>
       <div>
-        <h3>Your project got more complex than expected.</h3>
-        <p>The build started simple, then scope grew. The CMS needs custom work. The integrations are tricky. You need
-          someone who can handle the parts your team can't. I'll assess what's actually needed, give you an honest
-          estimate, and do the work right.</p>
-      </div>
-    </article>
+        <h3>You need it built right. The First time.</h3>
 
-    <article>
-      <img alt="Robot hand 4" src="img/hand-4-alt.png"/>
-      <div>
-        <h3>You need a site built right. The first time.</h3>
-        <p>You're a small team or a business without in-house engineering. You need a website, a web app, or something
-          custom. You want it done well and you don't want to manage the process. I'll scope the project with you up
-          front so there are no surprises, then handle the build from start to finish.</p>
-      </div>
-    </article>
+        <article>
+          <header>
+            <svg viewBox="0 0 512 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M168.2 384.9c-15-5.4-31.7-3.1-44.6 6.4c-8.2 6-22.3 14.8-39.4 22.7c5.6-14.7 9.9-31.3 11.3-49.4c1-12.9-3.3-25.7-11.8-35.5C60.4 302.8 48 272 48 240c0-79.5 83.3-160 208-160s208 80.5 208 160s-83.3 160-208 160c-31.6 0-61.3-5.5-87.8-15.1zM26.3 423.8c-1.6 2.7-3.3 5.4-5.1 8.1l-.3 .5c-1.6 2.3-3.2 4.6-4.8 6.9c-3.5 4.7-7.3 9.3-11.3 13.5c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c5.1 0 10.2-.3 15.3-.8l.7-.1c4.4-.5 8.8-1.1 13.2-1.9c.8-.1 1.6-.3 2.4-.5c17.8-3.5 34.9-9.5 50.1-16.1c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9zM169.8 149.3l-.4 1.2c-4.4 12.5 2.1 26.2 14.6 30.6s26.2-2.1 30.6-14.6l.4-1.2c1.1-3.2 4.2-5.3 7.5-5.3l58.3 0c8.4 0 15.1 6.8 15.1 15.1c0 5.4-2.9 10.4-7.6 13.1l-44.3 25.4c-7.5 4.3-12.1 12.2-12.1 20.8l0 13.5c0 13.3 10.7 24 24 24c13.1 0 23.8-10.5 24-23.6l32.3-18.5c19.6-11.3 31.7-32.2 31.7-54.8c0-34.9-28.3-63.1-63.1-63.1l-58.3 0c-23.7 0-44.8 14.9-52.8 37.3zM288 336a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+                fill="currentColor"/>
+            </svg>
+            <h4>You have an idea but don't know where to start.</h4>
+          </header>
+          <p>You know what you want to build but not how to get there. I'll help you figure out scope, timeline, and
+            cost
+            before a single line of code gets written.</p>
+        </article>
 
-    <article>
-      <img alt="Robot hand 5" src="img/hand-5-alt.png"/>
-      <div>
-        <h3>You need ongoing engineering support.</h3>
-        <p>Not every project needs a full engagement. Sometimes you just need a reliable person you can call when
-          technical work comes up. I'm available on retainer for teams that want consistent access without a full-time
-          hire. You'll get the same quality and attention whether it's a two-hour fix or a two-month build.</p>
-      </div>
-    </article>
+        <article>
+          <header>
+            <svg viewBox="0 0 640 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M320 0c13.3 0 24 10.7 24 24l0 72 104 0c53 0 96 43 96 96l0 224c0 53-43 96-96 96l-256 0c-53 0-96-43-96-96l0-224c0-53 43-96 96-96l104 0 0-72c0-13.3 10.7-24 24-24zM192 144c-26.5 0-48 21.5-48 48l0 224c0 26.5 21.5 48 48 48l256 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48l-128 0-128 0zM48 224l16 0 0 192-16 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-16 0 0-192 16 0zM208 384l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm96 0l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm96 0l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zM200 256a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zm200-40a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"
+                fill="currentColor"/>
+            </svg>
+            <h4>Your AI-generated codebase needs an actual engineer.</h4>
+          </header>
+          <p>AI tools can write a lot of code fast. That doesn't mean it's good. If your codebase was generated or
+            heavily assisted by AI, and now it's fragile, hard to maintain, or nobody on your team fully understands it,
+            I'll audit it, clean it up, and get it to a place where humans can work on it again.</p>
+        </article>
 
-    <article>
-      <img alt="Robot hand 6" src="img/hand-6-alt.png"/>
-      <div>
-        <h3>Your AI-generated codebase needs an actual engineer.</h3>
-        <p>AI tools can write a lot of code fast. That doesn't mean it's good. If your codebase was generated or heavily
-          assisted by AI, and now it's fragile, hard to maintain, or nobody on your team fully understands it, I'll
-          audit it, clean it up, and get it to a place where humans can work on it again.</p>
+        <article>
+          <header>
+            <svg viewBox="0 0 512 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M257.1 87.5c-11.3 0-22.4 1.1-33.1 3.3l0-48.7c10.8-1.7 21.9-2.5 33.1-2.5c56 0 107 21.3 145.4 56.2l35.1-35.1c10.1-10.1 27.3-2.9 27.3 11.3l0 105.4c0 8.8-7.2 16-16 16l-105.4 0c-14.3 0-21.4-17.2-11.3-27.3l36.3-36.3c-29.6-26.3-68.7-42.2-111.4-42.2zM129.9 145.9c-25.4 29.4-40.7 67.8-40.7 109.7c0 11.1 1.1 22 3.1 32.5l-48.7 0c-1.6-10.6-2.4-21.4-2.4-32.5c0-55.2 20.7-105.5 54.7-143.7L60.7 76.7C50.6 66.6 57.7 49.4 72 49.4l105.4 0c8.8 0 16 7.2 16 16l0 105.4c0 14.3-17.2 21.4-27.3 11.3l-36.2-36.2zm52.2 202.4l-34.6 34.6c29.4 25.4 67.8 40.7 109.7 40.7c10.5 0 20.9-1 30.9-2.8l0 48.6c-10.1 1.4-20.4 2.2-30.9 2.2c-55.2 0-105.5-20.7-143.7-54.7L76.7 453.6c-10.1 10.1-27.3 2.9-27.3-11.3l0-105.4c0-8.8 7.2-16 16-16l105.4 0c14.3 0 21.4 17.2 11.3 27.3zm166.2-16l34.7 34.7c26.3-29.6 42.2-68.7 42.2-111.4c0-10.8-1-21.3-3-31.5l48.7 0c1.5 10.3 2.3 20.8 2.3 31.5c0 56-21.3 107-56.2 145.4l36.7 36.7c10.1 10.1 2.9 27.3-11.3 27.3l-105.4 0c-8.8 0-16-7.2-16-16l0-105.4c0-14.3 17.2-21.4 27.3-11.3z"
+                fill="currentColor"/>
+            </svg>
+            <h4>You need ongoing engineering support.</h4>
+          </header>
+          <p>Not every project needs a full engagement. Sometimes you just need a reliable person you can call when
+            technical work comes up. I'm available on retainer for teams that want consistent access without a full-time
+            hire. You'll get the same quality and attention whether it's a two-hour fix or a six-month build.</p>
+        </article>
       </div>
-    </article>
+    </details>
+
+
+    <details name="services">
+      <summary>For Businesses</summary>
+      <div>
+        <h3>Sites that convert. Tools that work.</h3>
+
+        <article>
+          <header>
+            <svg viewBox="0 0 576 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M115.6 0C96 0 80 16 80 35.6C80 113.2 142.8 176 220.4 176l43.6 0 0 80c0 13.3 10.7 24 24 24s24-10.7 24-24l0-104C312 68.1 243.9 0 160 0L115.6 0zM160 48c49.2 0 90.4 34.1 101.2 80l-40.9 0c-46.8 0-85.5-34.8-91.5-80L160 48zm5.2 310.7c6.6-4.4 14.3-6.7 22.2-6.7L344 352c8.8 0 16 7.2 16 16s-7.2 16-16 16l-24 0-64 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l64 0 24 0 48 0c4.4 0 8.8-1.2 12.6-3.6l93.5-57.5c3.1-1.9 6.7-2.9 10.3-2.9l7.4 0c6.8 0 12.3 5.5 12.3 12.3c0 4.2-2.1 8-5.6 10.3l-95.6 61.9C415.1 460 401.5 464 387.7 464L24 464c-13.3 0-24 10.7-24 24s10.7 24 24 24l363.7 0c23.1 0 45.8-6.7 65.2-19.3l95.6-61.9c17.2-11.1 27.5-30.2 27.5-50.6c0-33.3-27-60.3-60.3-60.3l-7.4 0c-12.5 0-24.8 3.5-35.5 10L408 370c0-.7 0-1.3 0-2c0-35.3-28.7-64-64-64l-156.6 0c-17.4 0-34.4 5.1-48.8 14.8L64.7 368 24 368c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c4.7 0 9.4-1.4 13.3-4l79.9-53.3zM355.6 176C433.2 176 496 113.2 496 35.6C496 16 480 0 460.4 0L416 0c-41.7 0-79.5 16.8-107 44c10 13.8 18.1 29 24 45.2C352 64.2 382.1 48 416 48l31.2 0c-6 45.2-44.7 80-91.5 80l-13.2 0c1 7.9 1.6 15.9 1.6 24l0 24 11.6 0z"
+                fill="currentColor"/>
+            </svg>
+            <h4>You have outgrown your current brand and digital presence.</h4>
+          </header>
+          <p>Your business has changed but your brand hasn't. I'll help you start fresh with a new identity, website,
+            and digital assets that reflect where you are now. Not where you were five years ago.</p>
+        </article>
+
+        <article>
+          <header>
+            <svg viewBox="0 0 640 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L440.6 320l178.1 0c11.8 0 21.3-9.6 21.3-21.3C640 239.8 592.2 192 533.3 192l-42.7 0c-15.9 0-31 3.5-44.6 9.7c1.3 7.2 1.9 14.7 1.9 22.3c0 30.2-10.5 58-28 79.9l-25.2-19.7C408.1 267.7 416 246.8 416 224c0-53-43-96-96-96c-31.1 0-58.7 14.8-76.3 37.7l-40.6-31.8c13-14.2 20.9-33.1 20.9-53.9c0-44.2-35.8-80-80-80C116.3 0 91.9 14.1 77.5 35.5L38.8 5.1zM281.5 195.3c8.8-11.7 22.7-19.3 38.5-19.3c26.5 0 48 21.5 48 48c0 11.6-4.1 22.2-11 30.5l-75.5-59.2zM106.7 192C47.8 192 0 239.8 0 298.7C0 310.4 9.6 320 21.3 320l213.3 0c.2 0 .4 0 .7 0c-20.6-18.2-35.2-42.8-40.8-70.8L121.8 192l-15.2 0zM261.3 352C187.7 352 128 411.7 128 485.3c0 14.7 11.9 26.7 26.7 26.7l330.7 0c10.5 0 19.5-6 23.9-14.8l-49.7-39.1c.7 1.9 1.2 3.9 1.8 5.9l-282.6 0c9.5-36.8 42.9-64 82.6-64l117.3 0c2.6 0 5.1 .1 7.6 .3L324.9 352l-63.6 0zM512 160A80 80 0 1 0 512 0a80 80 0 1 0 0 160z"
+                fill="currentColor"/>
+            </svg>
+            <h4>Your website isn't bringing in customers.</h4>
+          </header>
+          <p>If people can't find you or leave your site before picking up the phone, something's wrong. I'll build a
+            site
+            that loads fast, looks good on every device, and shows up when people search for what you do.</p>
+        </article>
+
+        <article>
+          <header>
+            <svg viewBox="0 0 512 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM23.2 376.8C8.3 391.7 0 411.8 0 432.8C0 476.5 35.5 512 79.2 512c21 0 41.1-8.3 56-23.2L238.5 385.5c-8.9-17.6-12.8-37.1-11.6-56.3L101.3 454.9c-5.9 5.8-13.8 9.1-22.1 9.1C62 464 48 450 48 432.8c0-8.3 3.3-16.2 9.1-22.1L194.3 273.5l-33.9-33.9L23.2 376.8zM463.9 164c-1.4 38.9-22.6 72.8-53.8 91.8c1.1 1 2.1 2 3.1 3l31.6 31.6c40.7-29 67.2-76.6 67.2-130.3c0-24.8-5.7-48.3-15.7-69.3c-4.4-9.2-16.5-10.5-23.7-3.3l-67.9 67.9c-3 3-7.1 4.7-11.3 4.7L368 160c-8.8 0-16-7.2-16-16l0-25.4c0-4.2 1.7-8.3 4.7-11.3l67.9-67.9c7.2-7.2 5.9-19.3-3.3-23.7C400.3 5.7 376.8 0 352 0C294.7 0 244.4 30.1 216.2 75.4C221.2 84 224 93.8 224 104l0 40.8 16 16 0-.8c0-60.5 48-109.9 108-111.9L322.7 73.4s0 0 0 0c-12 12-18.7 28.3-18.7 45.3l0 25.4c0 35.3 28.7 64 64 64l25.4 0c17 0 33.3-6.7 45.3-18.7L463.9 164z"
+                fill="currentColor"/>
+            </svg>
+            <h4>You need custom tools or integrations that actually work.</h4>
+          </header>
+          <p>Booking systems, patient portals, intake forms, online ordering. Whether you need something built from
+            scratch or you need your existing tools connected so they stop fighting each other, I'll handle it. Scoped
+            and
+            priced up front so you know exactly what you're getting.</p>
+        </article>
+      </div>
+    </details>
+
+    <details name="services">
+      <summary>For Agencies</summary>
+      <div>
+        <h3>You sell the work. I build it.</h3>
+
+        <article>
+          <header>
+            <svg viewBox="0 0 576 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M512 48c8.8 0 16 7.2 16 16l0 288c0 8.8-7.2 16-16 16l-175.5 0c-.3 0-.6 0-.8 0l-95.2 0c-.3 0-.6 0-.8 0L64 368c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l448 0zM64 416l147.7 0-8 48L152 464c-13.3 0-24 10.7-24 24s10.7 24 24 24l72 0 128 0 72 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-51.7 0-8-48L512 416c35.3 0 64-28.7 64-64l0-288c0-35.3-28.7-64-64-64L64 0C28.7 0 0 28.7 0 64L0 352c0 35.3 28.7 64 64 64zm188.3 48l8-48 55.3 0 8 48-71.3 0zM249 177c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-48 48c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zM361 143c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"
+                fill="currentColor"/>
+            </svg>
+            <h4>Your team sold a project. Now you need someone to build it.</h4>
+          </header>
+          <p>You closed the deal but your bench is full. I step in, pick up the scope, and deliver. Your client never
+            knows I'm not on staff. I scope accurately, communicate clearly, and ship what I said I would, when I said I
+            would.</p>
+        </article>
+
+        <article>
+          <header>
+            <svg viewBox="0 0 448 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M384 48c8.8 0 16 7.2 16 16l0 384c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l320 0zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L64 0zM80 112l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16L96 96c-8.8 0-16 7.2-16 16zM96 352c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm80-224c0 13.3 10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0c-13.3 0-24 10.7-24 24zm32 128c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0c-13.3 0-24 10.7-24 24zM176 384c0 13.3 10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0c-13.3 0-24 10.7-24 24zm-4.7-140.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L112 257.4 99.3 244.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l24 24c6.2 6.2 16.4 6.2 22.6 0l48-48z"
+                fill="currentColor"/>
+            </svg>
+            <h4>Your project got more complex than expected.</h4>
+          </header>
+          <p>The build started simple, then scope grew. The CMS needs custom work. The integrations are tricky. You need
+            someone who can handle the parts your team can't. I'll assess what's actually needed, give you an honest
+            estimate, and do the work right.</p>
+        </article>
+
+        <article>
+          <header>
+            <svg viewBox="0 0 640 512"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M64 64a64 64 0 1 1 128 0A64 64 0 1 1 64 64zm41.6 144c-16.6 0-30.5 12.8-31.9 29.3l-4.1 49.3C68.8 296 76.2 304 85.6 304l2.4 0 40 0c0 14.3 5.5 28.7 16.4 39.6L192 391.2l0 96.8c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-136-32 0 0 136c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-139.7c-26.5-9.5-44.7-35.8-42.2-65.6l4.1-49.3C29.3 191.9 64 160 105.6 160l44.8 0c27 0 51 13.4 65.5 34.1c-2.6 1.8-5.2 4-7.5 6.3l-28.1 28.1c-4.6-12.1-16.3-20.5-29.9-20.5l-44.8 0zM448 488l0-96.8 47.6-47.6C506.5 332.7 512 318.3 512 304l40 0 2.4 0c9.4 0 16.7-8 15.9-17.3l-4.1-49.3C564.9 220.8 551 208 534.4 208l-44.8 0c-13.5 0-25.2 8.4-29.9 20.5l-28.1-28.1c-2.4-2.4-4.9-4.5-7.5-6.3c14.5-20.7 38.6-34.1 65.5-34.1l44.8 0c41.6 0 76.3 31.9 79.7 73.4l4.1 49.3c2.5 29.8-15.7 56.1-42.2 65.6L576 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-136-32 0 0 136c0 13.3-10.7 24-24 24s-24-10.7-24-24zm0-424a64 64 0 1 1 128 0A64 64 0 1 1 448 64zM265 257l-23 23 156.1 0-23-23c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l64 64c9.4 9.4 9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l23-23-156.1 0 23 23c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9l64-64c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                fill="currentColor"/>
+            </svg>
+            <h4>You are in-between vendors.</h4>
+          </header>
+          <p>You hired someone, and it didn't work out, or you're mid-project with no one to finish it. I'll pick it up,
+            figure out where things stand, and get it across the line.</p>
+        </article>
+      </div>
+    </details>
   </section>
 
   <section id="testimonials">
+    <h2>Testimonials</h2>
+
     <article>
-      <img alt="TJ Heaney" src="img/TJ.png"/>
-      <div>
-        <p>
-          <em>"He is a skilled and capable individual. When the opportunity is present, I leap at the chance to work
-            with him."</em>
-        </p>
-        <p>T.J. Heaney, Senior QA Analyst</p>
-      </div>
+      <header>
+        <img src="/img/TJ.png">
+      </header>
+      <p>
+        <q>He is a skilled and capable individual. When the opportunity is present, I leap at the chance to work with
+          him.</q>
+        <cite>T.J. Heaney, Senior QA Analyst</cite>
+      </p>
     </article>
 
     <article>
-      <img alt="Sara Haas" src="img/Sara.png"/>
-      <div>
-        <p>
-          <em>"Not only is he technically adept, he's a genuine human being."</em>
-        </p>
-        <p>Sara Haas, HR Specialist</p>
-      </div>
+      <header>
+        <img src="/img/Sara.png">
+      </header>
+      <p>
+        <q>Not only is he technically adept, he's a genuine human being.</q>
+        <cite>Sara Haas, HR Specialist</cite>
+      </p>
     </article>
 
     <article>
-      <img alt="Krysta Hunt" src="img/Krysta.png"/>
-      <div>
-        <p>
-          <em>"One of the most brilliant minds for strategic architecture I have ever seen. Rock solid work, great
-            attitude."</em>
-        </p>
-        <p>Krysta Hunt, Dir. of Engineering</p>
-      </div>
+      <header>
+        <img src="/img/Krysta.png">
+      </header>
+      <p>
+        <q>One of the most brilliant minds for strategic architecture I have ever seen. Rock solid work, great
+          attitude.</q>
+        <cite>Krysta Hunt, Dir. of Engineering</cite>
+      </p>
     </article>
 
     <article>
-      <img alt="Ashley Varner" src="img/Ashley.png"/>
-      <div>
-        <p>
-          <em>"Always on top of his work and delivered really exceptional results. He's incredibly easy to work
-            with."</em>
-        </p>
-        <p>Ashley Varner, Analytics Consultant</p>
-      </div>
+      <header>
+        <img src="/img/Ashley.png">
+      </header>
+      <p>
+        <q>Always on top of his work and delivered really exceptional results. He's incredibly easy to work with.</q>
+        <cite>Ashley Varner, Analytics Consultant</cite>
+      </p>
     </article>
   </section>
 </main>
 <footer id="footer">
-  ©
+  &copy;
   <a href="https://killiangrant.com" target="_blank">Killian Grant</a> |
   <a href="mailto:hello@secrethandshake.io">hello@secrethandshake.io</a>
 </footer>
-
-<script type="module" src="js/main.js"></script>
+<svg height="100%" id="blobs" width="100%"></svg>
+<script src="js/main.js" type="module"></script>
 </body>
 </html>

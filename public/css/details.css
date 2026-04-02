@@ -1,0 +1,34 @@
+details {
+  summary {
+    background: linear-gradient(135deg, var(--color-pink), var(--color-green));
+    font-weight: 900;
+    font-family: "Torcao", cursive;
+    font-size: calc(var(--font-size) * 2);
+    color: var(--color-background);
+    cursor: pointer;
+    padding: 0 calc(var(--gap) / 2);
+    margin-bottom: var(--gap);
+  }
+
+  div {
+    margin-bottom: calc(var(--gap) * 2);
+  }
+
+  &:not([open]):last-of-type {
+    summary {
+      margin-bottom: 0;
+    }
+  }
+}
+
+details:nth-of-type(2) {
+  summary {
+    background: linear-gradient(135deg, var(--color-green), var(--color-blue));
+  }
+}
+
+details:nth-of-type(3) {
+  summary {
+    background: linear-gradient(135deg, var(--color-blue), var(--color-pink));
+  }
+}
