@@ -90,7 +90,7 @@ export default class Blobs {
         const dist = Math.sqrt(dx * dx + dy * dy) || 1;
         const minDist = a.radius + b.radius;
 
-        if (dist < minDist * 3) {
+        if (dist < minDist * 2) {
           const force = (a.repulsion + b.repulsion) * this.blobRepulsion / dist;
           fx += (dx / dist) * force;
           fy += (dy / dist) * force;
@@ -101,7 +101,7 @@ export default class Blobs {
       const mdx = a.x - this.mouseX;
       const mdy = a.y - this.mouseY;
       const mDist = Math.sqrt(mdx * mdx + mdy * mdy) || 1;
-      const mouseRadius = 200;
+      const mouseRadius = 128;
 
       if (mDist < mouseRadius + a.radius) {
         const force = this.mouseRepulsion / (mDist * mDist);
@@ -117,10 +117,10 @@ export default class Blobs {
         fx -= this.edgeRepulsion / Math.max(w - a.x, 1);
       }
       if (a.y < this.edgeBuffer + a.radius) {
-        fy += this.edgeRepulsion / Math.max(a.y, 10);
+        fy += this.edgeRepulsion / Math.max(a.y, 8);
       }
       if (a.y > h - this.edgeBuffer - a.radius) {
-        fy -= this.edgeRepulsion / Math.max(h - a.y, 10);
+        fy -= this.edgeRepulsion / Math.max(h - a.y, 8);
       }
 
       a.vx += fx;
