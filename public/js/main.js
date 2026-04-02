@@ -1,4 +1,4 @@
-import Blobs from './Blobs.js';
+import Blobs from './blobs.js';
 
 class Main {
   constructor() {
