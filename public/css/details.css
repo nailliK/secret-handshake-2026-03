@@ -2,7 +2,7 @@ details {
   summary {
     background: linear-gradient(135deg, var(--color-pink), var(--color-green));
     font-weight: 900;
-    font-family: "Torcao", cursive;
+    font-family: "Torcao Ext", cursive;
     font-size: calc(var(--font-size) * 2);
     color: var(--color-background);
     cursor: pointer;
