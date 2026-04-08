@@ -24,7 +24,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: calc(var(--font-size) * 6);
+  font-size: calc(var(--font-size) * 7);
+  font-family: "Torcao Cond", cursive;
+  font-weight: 200;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 h2 {
@@ -50,7 +54,8 @@ h4 {
   }
 
   h1 {
-    font-size: calc(var(--font-size) * 4);
+    font-size: calc(var(--font-size) * 4.5);
+    hyphens: none;
   }
 
   h2 {
